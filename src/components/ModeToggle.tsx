@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Moon, MoonIcon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
