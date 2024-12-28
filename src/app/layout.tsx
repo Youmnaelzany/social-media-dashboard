@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
+import Header from "@/components/Header";
 
 
 const inter = Inter({
@@ -22,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} m-0 p-0 box-border antialiased`}
+        className={`${inter.variable} m-0 p-0 box-border antialiased dark:bg-[#1D1F29] bg-white`}
       >
         <ThemeProvider
           attribute="class"
@@ -32,6 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
 
